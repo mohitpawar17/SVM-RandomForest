@@ -10,7 +10,7 @@ import joblib
 st.set_option('deprecation.showfileUploaderEncoding', False)
 # Load the pickled model
 model = pickle.load('svmmodel.pkl')
-model_randomforest = joblib.load('randomforest.pkl')
+model_randomforest = pickle.load('randomforest.pkl')
 dataset= pd.read_csv('Social_Network_Ads.csv')
 X = dataset.iloc[:, [2, 3]].values
 from sklearn.preprocessing import StandardScaler
